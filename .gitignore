@@ -3,3 +3,4 @@ htmlcov
 .coverage
 poetry.lock
 requirements.txt
+coverage.xml
