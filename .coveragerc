@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = src
+dynamic_context = test_function
+
+[html]
+show_contexts = True

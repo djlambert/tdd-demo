@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "tdd-demo"
+version = "0.1.0"
+description = ""
+authors = ["Derek Lambert <derek.lambert@cdw.com>"]
+
+packages = [
+    { include = "demo_client", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
