@@ -2,3 +2,4 @@ htmlcov
 .pytest_cache
 .coverage
 poetry.lock
+requirements.txt

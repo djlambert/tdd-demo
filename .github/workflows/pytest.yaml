@@ -22,14 +22,13 @@ jobs:
       - name: Create and load virtual environment
         run: |
           python -m pip install --upgrade pip poetry
-          poetry install
+          poetry export -o requirements.txt --dev
+          pip install -r requirements.txt
 
       - name: Run test suite
         run: |
-          poetry shell
           pytest --cov=demo_client --cov-report=xml --cov-report=html
 
       - name: Lint with flake8
         run: |
-          poetry shell
           flake8 .
