@@ -42,3 +42,11 @@ jobs:
         run: |
           . $(poetry env info -p)/bin/activate
           flake8 .
+
+      - name: Report status
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: 'Test run'
+          description: 'Passed'
+          state: 'success'
