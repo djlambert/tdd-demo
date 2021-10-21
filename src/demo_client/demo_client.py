@@ -4,7 +4,13 @@ import requests
 
 
 class DemoClient:
-    def get_json(self) -> Dict[Text, Any]:
+    @staticmethod
+    def get_json() -> Dict[Text, Any]:
         response = requests.get('https://httpbin.org/json')
 
         return response.json()
+
+    def get_text(self) -> Text:
+        response = requests.get('https://httpbin.org/json')
+
+        return response.text
