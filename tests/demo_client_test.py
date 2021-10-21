@@ -7,3 +7,10 @@ class DemoClientTest:
         client = DemoClient()
 
         assert isinstance(client, DemoClient)
+
+    def test_get_json(self):
+        client = DemoClient()
+
+        json = client.get_json()
+
+        assert all(isinstance(key, str) for key in json.keys())
